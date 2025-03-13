@@ -1,5 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
+import 'react-native-reanimated'
 
 function _layout() {
     return (
