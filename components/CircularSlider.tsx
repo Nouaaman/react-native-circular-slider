@@ -13,8 +13,8 @@ const images = [
 ]
 
 const screenWidth = Dimensions.get('screen').width
-const _itemSize = screenWidth * 0.30
-const _spacing = 24
+const _itemSize = screenWidth * 0.24
+const _spacing = 18
 
 export default function CIrcularSlider() {
     const scrollX = useSharedValue(0)
@@ -25,7 +25,7 @@ export default function CIrcularSlider() {
     return (
         <View style={{ flex: 1, justifyContent: 'flex-end' }}>
             <Animated.FlatList
-                style={{ flexGrow: 0, paddingBottom: _itemSize * 0.8 }}
+                style={{ flexGrow: 0, paddingBottom: _itemSize }}
                 contentContainerStyle={{ paddingHorizontal: (screenWidth - _itemSize) / 2, gap: _spacing }}
                 data={images}
                 keyExtractor={(_, index) => index.toString()}
