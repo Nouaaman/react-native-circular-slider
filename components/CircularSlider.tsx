@@ -14,18 +14,19 @@ const images = [
 
 const screenWidth = Dimensions.get('screen').width
 const _itemSize = screenWidth * 0.30
-const _spacing = 14
+const _spacing = 24
 
 export default function CIrcularSlider() {
     const scrollX = useSharedValue(0)
     const onSroll = useAnimatedScrollHandler((e) => {
-        scrollX.value = e.contentOffset.x
+        scrollX.value = e.contentOffset.x / _itemSize + _spacing
     })
 
     return (
         <View style={{ flex: 1, justifyContent: 'flex-end' }}>
             <Animated.FlatList
-                style={{ flexGrow: 0 }}
+                style={{ flexGrow: 0, paddingBottom: _itemSize * 0.8 }}
+                contentContainerStyle={{ paddingHorizontal: (screenWidth - _itemSize) / 2, gap: _spacing }}
                 data={images}
                 keyExtractor={(_, index) => index.toString()}
                 horizontal
@@ -35,10 +36,13 @@ export default function CIrcularSlider() {
                         image={item}
                         index={index}
                         itemSize={_itemSize}
+                        scrollX={scrollX}
                     />
                 )}
                 onScroll={onSroll}
                 scrollEventThrottle={16}
+                snapToInterval={_itemSize + _spacing}
+                decelerationRate={'fast'}
             />
         </View>
     )
