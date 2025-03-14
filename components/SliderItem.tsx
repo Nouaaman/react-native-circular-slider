@@ -35,7 +35,7 @@ export default function SliderItem({ image, index, itemSize, scrollX }: SliderIt
         <Animated.View
             style={[styles,
                 {
-                    borderWidth: 4,
+                    borderWidth: 6,
                     width: itemSize,
                     height: itemSize,
                     borderRadius: itemSize / 2,
@@ -47,6 +47,7 @@ export default function SliderItem({ image, index, itemSize, scrollX }: SliderIt
             <Image style={{
                 width: itemSize,
                 height: itemSize,
+                borderRadius: itemSize / 2,
             }}
                 source={image}
             />

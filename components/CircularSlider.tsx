@@ -1,4 +1,4 @@
-import { View, Dimensions } from 'react-native'
+import { View, Dimensions, Image } from 'react-native'
 import React from 'react'
 import SliderItem from './SliderItem'
 import Animated, { useAnimatedScrollHandler, useSharedValue } from 'react-native-reanimated'
@@ -24,6 +24,10 @@ export default function CircularSlider() {
 
     return (
         <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+            <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center' }}>
+                <Image source={images[0]} />
+            </View>
+
             <Animated.FlatList
                 style={{ flexGrow: 0, paddingBottom: _itemSize }}
                 contentContainerStyle={{ paddingHorizontal: (screenWidth - _itemSize) / 2, gap: _spacing }}
