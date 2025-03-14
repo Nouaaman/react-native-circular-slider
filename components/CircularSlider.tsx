@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Dimensions, NativeEventEmitter } from 'react-native'
+import { View, Dimensions } from 'react-native'
 import React from 'react'
 import SliderItem from './SliderItem'
 import Animated, { useAnimatedScrollHandler, useSharedValue } from 'react-native-reanimated'
@@ -16,10 +16,10 @@ const screenWidth = Dimensions.get('screen').width
 const _itemSize = screenWidth * 0.24
 const _spacing = 18
 
-export default function CIrcularSlider() {
+export default function CircularSlider() {
     const scrollX = useSharedValue(0)
     const onSroll = useAnimatedScrollHandler((e) => {
-        scrollX.value = e.contentOffset.x / _itemSize + _spacing
+        scrollX.value = e.contentOffset.x / (_itemSize + _spacing)
     })
 
     return (
