@@ -2,6 +2,10 @@
 
 ## demo
 
+
+https://github.com/user-attachments/assets/09b27276-3530-4ee7-96f2-9d65d8de961a
+
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
