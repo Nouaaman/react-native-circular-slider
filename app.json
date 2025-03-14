@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "CS",
+    "name": "Circular Slider",
     "slug": "circular-slider",
     "version": "1.0.0",
     "orientation": "portrait",
     "newArchEnabled": true,
     "splash": {
       "resizeMode": "contain",
-      "backgroundColor": "#ff00ff"
+      "backgroundColor": "#2596be"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,12 +20,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        // "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
-    "web": {
-      // "favicon": "./assets/favicon.png"
-    }
+    "web": {},
+    "plugins": [
+      "expo-asset"
+    ]
   }
 }

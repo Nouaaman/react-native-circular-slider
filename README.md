@@ -1,4 +1,10 @@
-# Welcome to your Expo app 👋
+# Circular Slider 👋
+
+## demo
+
+<video controls autoplay>
+  <source src="/demo.mp4" type="video/mp4">
+</video>
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -48,4 +54,5 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
 # react-native-circular-slider
